@@ -5,7 +5,7 @@ const Text = () => {
     <>
         <div style={{marginTop: "30px", marginLeft: "50px"}}>
           <h2>3D Object</h2>
-          <p>Lorem Ipsum Text</p>
+          <p style={{fontSize: "12px", marginTop: "10px", width: "200px"}}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum </p>
         </div>
     </>
   )
