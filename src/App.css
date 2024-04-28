@@ -4,3 +4,17 @@
   width: 100%;
   box-sizing: border-box;
 }
+
+#container {
+  width: 80vw;
+  /* background-color: aqua; */
+  display: flex;
+  margin-top: 60px !important;
+  margin: 0 auto;
+}
+
+#canvas {
+  /* background-color: pink; */
+  height: 70vh !important;
+  /* width: 50vw !important; */
+}
