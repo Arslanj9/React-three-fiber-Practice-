@@ -1,35 +1,18 @@
-// App.jsx
-import React, { useRef } from 'react';
+import React, { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import { useFrame, Canvas } from '@react-three/fiber';
+import Shape3d2 from './Shape3d2';
 
-const Model = () => {
-  const modelRef = useRef();
-
-  useFrame(() => {
-    // Update the position, rotation, or scale of the model here
-    // Example: modelRef.current.rotation.y += 0.01;
-  });
-
+function App() {
   return (
-    <mesh ref={modelRef}>
-      {/* Add your 3D model here */}
-      <sphereGeometry args={[3, 4, 5]} />
-      <meshStandardMaterial color="green" />
-    </mesh>
-  );
-};
-
-const App = () => {
-  const controlsRef = useRef();
-
-  return (
-    <Canvas>
-      <OrbitControls ref={controlsRef} />
-      <directionalLight />
-      <Model />
+    <Canvas style={{marginTop: "100px"}}>
+      <Suspense fallback={null}>
+        <directionalLight position={[4, 2, 6]}/>
+        <OrbitControls />
+        <Shape3d2 />
+      </Suspense>
     </Canvas>
   );
-};
+}
 
 export default App;
