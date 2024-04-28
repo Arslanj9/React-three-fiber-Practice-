@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import Shape3d2 from './Shape3d2';
+import Shape3d3 from './Shape3d3';
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Suspense fallback={null}>
         <directionalLight position={[4, 2, 6]}/>
         <OrbitControls />
-        <Shape3d2 />
+        <Shape3d3 />
       </Suspense>
     </Canvas>
   );
